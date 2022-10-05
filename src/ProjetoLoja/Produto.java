@@ -1,4 +1,4 @@
-package Aula2_2909;
+package ProjetoLoja;
 
 /**
  * @author glmgu on 29/09/2022
@@ -17,7 +17,7 @@ public class Produto {
     private String nome;
     private int quant;
     private double valor;
-
+    private static int idProduto = 0; //variavel de classe
 
     public  Produto (String nome, int quant, double valor){
         this.nome = nome;
@@ -25,6 +25,11 @@ public class Produto {
         this.valor = valor;
 
     }
+
+    public Produto (){
+        Produto produto = new Produto(nome,quant,valor);
+    }
+
     public String getNome() {
         return nome;
     }
@@ -47,5 +52,9 @@ public class Produto {
 
     public void setValor(double valor) {
         this.valor = valor;
+    }
+
+    public int getIdProduto() {
+        return idProduto;
     }
 }

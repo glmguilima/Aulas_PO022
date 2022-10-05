@@ -1,4 +1,4 @@
-package Aula2_2909;
+package ProjetoLoja;
 
 import java.util.Scanner;
 
@@ -7,11 +7,15 @@ import java.util.Scanner;
  */
 public class MainAula2 {
         public static void main(String[] args) {
-           Scanner sc = new Scanner(System.in);
-            int quant;
-            String produto;
-            double valor;
+         LojaUI minhaLoja = new LojaUI ();
+         minhaLoja.menu();
 
+
+
+
+
+
+/*
 
            System.out.println("Informe o quantos novos do produto deseja cadastrar");
            int quantProdutos = sc.nextInt();
@@ -29,7 +33,7 @@ public class MainAula2 {
                 System.out.println(novo.getValor());
             }
 
-
+*/
 
 
 
