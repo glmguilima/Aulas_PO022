@@ -1,4 +1,6 @@
 package Aula1;
+
+import Utils.AppCor;
 import java.util.Scanner;
 
 /**
@@ -17,7 +19,7 @@ public class BancoUI {
         int op;
         do{
             System.out.println("\n"+meuBanco.getNome()+"\n");
-            System.out.println("1. Abrir conta");
+            System.out.println(AppCor.RED + "1. Abrir conta"+ AppCor.RESET) ;
             System.out.println("2. Consultar saldo");
             System.out.println("3. Depositar");
             System.out.println("4. Sacar");
@@ -53,12 +55,21 @@ public class BancoUI {
 
     public void abriConta(){
         int numeroConta;
-        String nome;
+        String nome,cidade,estado;
+        String CPF;
 
-        System.out.println("Abertura de conta");
+
+        System.out.println( "Abertura de conta");
         System.out.print("Informe o nome do titular: ");
         nome = entrada.nextLine();
-        numeroConta = meuBanco.abrirConta(nome);
+        System.out.print("Informe o CPF do titular: ");
+        CPF=entrada.nextLine();
+        System.out.print("Informe a Cidade do titular: ");
+        cidade = entrada.nextLine();
+        System.out.print("Informe o Estado do titular: ");
+        estado=entrada.nextLine();
+
+        numeroConta = meuBanco.abrirConta(new Titular(nome,CPF,cidade,estado));
         if(numeroConta != -1){
             System.out.println("Abertura de conta realizada com sucesso. Numero de conta = "+numeroConta);
         }
