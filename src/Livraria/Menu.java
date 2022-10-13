@@ -36,6 +36,7 @@ public class Menu {
                 case 0: break;
                 default:
                     System.out.println("Opção inválida");
+                    System.out.println("digite uma opção correta");
             }
         }while(op!=0);
 
