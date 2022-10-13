@@ -6,8 +6,8 @@ package Livraria;
 public class DVDs extends Produto{
     private String autor, estilo;
 
-    public DVDs(int codigo, String nome, double valor) {
-        super(codigo, nome, valor);
+    public DVDs(String nome, double valor) {
+        super(nome, valor);
     }
 
     public String getAutor() {
@@ -24,5 +24,12 @@ public class DVDs extends Produto{
 
     public void setEstilo(String estilo) {
         this.estilo = estilo;
+    }
+
+    @Override
+    public String toString() {
+        return "DVDs \n" +super.toString()+
+                "autor = " + autor +
+                "\nestilo = " + estilo ;
     }
 }

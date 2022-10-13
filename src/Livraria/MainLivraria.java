@@ -33,9 +33,9 @@ Dvd Autor, estilo
 public class MainLivraria {
     public static void main(String[] args) {
         ListaProdutos lista = new ListaProdutos();
-        Revista r1 = new Revista(01,"reviNova",5);
-        Revista r2 = new Revista(02,"revNova2",5);
-        Livros l1 = new Livros(03,"LivPoo",100);
+        Revista r1 = new Revista("reviNova",5);
+        Revista r2 = new Revista("revNova2",5);
+        Livros l1 = new Livros("LivPoo",100);
         lista.inserirProduto(r1);
         lista.inserirProduto(r2);
         lista.inserirProduto(l1);
@@ -45,8 +45,13 @@ public class MainLivraria {
         r1.setValor(10);
         r2.setNome("Info Exame");
         r2.setEditora("Globo");
+        DVDs d1=new DVDs("dvd01",15);
+        d1.setAutor("desconhecido");
+        d1.setEstilo("Estudos");
+        lista.inserirProduto(d1);
         System.out.println(AppCor.GREEN_BOLD+ r1.toString()+AppCor.RESET);
         System.out.println(AppCor.BLUE_BOLD+l1.toString()+AppCor.RESET);
+        System.out.println(AppCor.CYAN_BOLD+d1.toString()+AppCor.RESET);
         System.out.println(lista.toString()); //formatar isso
     }
 }

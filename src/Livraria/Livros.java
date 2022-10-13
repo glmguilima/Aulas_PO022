@@ -6,8 +6,8 @@ package Livraria;
 public class Livros extends Produto{
     private String autor,editora;
 
-    public Livros(int codigo, String nome, double valor) {
-        super(codigo, nome, valor);
+    public Livros(String nome, double valor) {
+        super(nome, valor);
     }
 
     public String getAutor() {
@@ -28,9 +28,7 @@ public class Livros extends Produto{
 
     @Override
     public String toString() {
-        return "Livros {" +
-                "autor=" + autor +
-                ", editora=" + editora +
-                "} " + super.toString();
+        return "Livros \n" + super.toString() + "Autor = " + autor + "\nEditora = " + editora+"\n";
+
     }
 }

@@ -7,30 +7,26 @@ public abstract class Produto {
 int codigo ;
 String nome;
 double valor;
+private static int codigoGeral=1; //utilizar para implementar codigo automatico
 
 
-    public Produto (int codigo, String nome,double valor){
-        this.codigo=codigo;
+    public Produto (String nome,double valor){
+        this.codigo=codigoGeral++;
         this.nome = nome;
         this.valor=valor;
     }
 
     @Override
     public String toString() {
-        return "Produto{" +
-                "codigo='" + codigo + '\'' +
-                ", nome='" + nome + '\'' +
-                ", valor=" + valor +
-                '}';
+        return  "nome = " + nome +"\n"+
+                "codigo = " + codigo +"\n"+
+                "valor = " + valor + "\n" ;
     }
 
     public int getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
-    }
 
     public String getNome() {
         return nome;

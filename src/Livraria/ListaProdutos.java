@@ -5,7 +5,11 @@ import java.util.ArrayList;
  * @author glmgu on 10/10/2022
  */
 public class ListaProdutos implements IListaProdutos{
-    ArrayList<Produto> lista = new ArrayList();
+    ArrayList<Produto> lista ;
+
+    public ListaProdutos(){
+        lista = new ArrayList<>();
+    }
 
     @Override
     public boolean inserirProduto(Produto produto) {
@@ -35,8 +39,6 @@ public class ListaProdutos implements IListaProdutos{
 
     @Override
     public String toString() {
-        return "ListaProdutos{" +
-                "lista=" + lista + "\n"+
-                '}';
+        return "Lista de Produtos \n" + lista + "\n" ;
     }
 }

@@ -6,8 +6,13 @@ package Livraria;
 public class Revista extends Produto{
     private String editora;
 
-    public Revista(int codigo, String nome, double valor) {
-        super(codigo, nome, valor);
+    public Revista(String nome, double valor) {
+        super(nome, valor);
+        editora = "";
+    }
+    public Revista(String nome, double valor, String editora) {
+        super(nome, valor);
+        this.editora=editora;
     }
 
 
@@ -22,6 +27,6 @@ public class Revista extends Produto{
 
     @Override
     public String toString() {
-        return "Revista  { Editora= " + editora + "}\'" + super.toString();
+        return "Revista: \n" + super.toString() +  "Editora = " + editora +"\n";
     }
 }
