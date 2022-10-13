@@ -32,7 +32,10 @@ Dvd Autor, estilo
  */
 public class MainLivraria {
     public static void main(String[] args) {
-        ListaProdutos lista = new ListaProdutos();
+        Menu livraria= new Menu();
+        livraria.menu();
+
+        /*ListaProdutos lista = new ListaProdutos();
         Revista r1 = new Revista("reviNova",5);
         Revista r2 = new Revista("revNova2",5);
         Livros l1 = new Livros("LivPoo",100);
@@ -50,9 +53,10 @@ public class MainLivraria {
         d1.setEstilo("Estudos");
         lista.inserirProduto(d1);
         System.out.println(AppCor.GREEN_BOLD+ r1.toString()+AppCor.RESET);
+        System.out.println(AppCor.GREEN_BOLD+ r2.toString()+AppCor.RESET);
         System.out.println(AppCor.BLUE_BOLD+l1.toString()+AppCor.RESET);
-        System.out.println(AppCor.CYAN_BOLD+d1.toString()+AppCor.RESET);
-        System.out.println(lista.toString()); //formatar isso
+        System.out.println(AppCor.CYAN_BOLD+d1.toString()+AppCor.RESET);*/
+     //   System.out.println(lista.toString()); //formatar isso
     }
 }
 

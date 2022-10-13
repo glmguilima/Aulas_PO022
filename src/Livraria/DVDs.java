@@ -29,7 +29,7 @@ public class DVDs extends Produto{
     @Override
     public String toString() {
         return "DVDs \n" +super.toString()+
-                "autor = " + autor +
-                "\nestilo = " + estilo ;
+                "autor =" + autor +
+                "estilo = " + estilo ;
     }
 }

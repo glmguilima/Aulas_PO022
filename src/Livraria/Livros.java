@@ -28,7 +28,7 @@ public class Livros extends Produto{
 
     @Override
     public String toString() {
-        return "Livros \n" + super.toString() + "Autor = " + autor + "\nEditora = " + editora+"\n";
+        return "Livro: \n" + super.toString() + "Autor = " + autor + "\nEditora = " + editora+"\n";
 
     }
 }
